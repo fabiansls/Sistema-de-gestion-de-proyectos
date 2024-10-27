@@ -1,0 +1,21 @@
+<!-- proyectos/lista_tareas.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <ul>
+        {% for tarea in tareas %}
+            <li>{{ tarea.descripcion }} - {{ tarea.fecha_creacion }}</li> <!-- Ajusta según tus atributos -->
+        {% empty %}
+            <li>No hay tareas registradas.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_tarea' %}">Crear Nueva Tarea</a>
+    <a href="{% url 'pagina_principal' %}">Volver a la página principal</a>
+</body>
+</html>

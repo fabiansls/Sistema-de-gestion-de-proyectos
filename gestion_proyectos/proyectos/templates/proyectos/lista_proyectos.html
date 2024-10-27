@@ -1,0 +1,21 @@
+<!-- proyectos/lista_proyectos.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Proyectos</title>
+</head>
+<body>
+    <h1>Lista de Proyectos</h1>
+    <ul>
+        {% for proyecto in proyectos %}
+            <li>{{ proyecto.nombre }} - {{ proyecto.descripcion }}</li> <!-- Ajusta según tus atributos -->
+        {% empty %}
+            <li>No hay proyectos registrados.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_proyecto' %}">Crear Nuevo Proyecto</a>
+    <a href="{% url 'pagina_principal' %}">Volver a la página principal</a>
+</body>
+</html>

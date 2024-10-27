@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{ usuario.nombre }} ({{ usuario.rol }})</li>
+        {% empty %}
+            <li>No hay usuarios.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_usuario' %}">Crear nuevo usuario</a>
+</body>
+</html>

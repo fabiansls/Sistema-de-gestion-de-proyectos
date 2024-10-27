@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  <!-- Ajusta según tu archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Página Principal</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'crear_usuario' %}">Crear Usuario</a></li>
+                <li><a href="{% url 'crear_equipo' %}">Crear Equipo</a></li>
+                <li><a href="{% url 'crear_proyecto' %}">Crear Proyecto</a></li>
+                <li><a href="{% url 'crear_tarea' %}">Crear Tarea</a></li>
+                <li><a href="{% url 'lista_usuarios' %}">Lista de Usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
