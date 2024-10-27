@@ -33,19 +33,19 @@ def crear_tarea(request):
     return render(request, 'proyectos/tarea_form.html', {'form': form})
 
 def lista_usuarios(request):
-    usuarios = Usuario.objects.all()  # O lo que necesites
+    usuarios = Usuario.objects.all()  
     return render(request, 'proyectos/lista_usuarios.html', {'usuarios': usuarios})
 
 def lista_equipos(request):
-    equipos = Equipo.objects.all()  # Obtén todos los equipos
+    equipos = Equipo.objects.all()  
     return render(request, 'proyectos/lista_equipos.html', {'equipos': equipos})
 
 def lista_tareas(request):
-    Tareas = Tarea.objects.all()  # Obtén todos los equipos
+    Tareas = Tarea.objects.all() 
     return render(request, 'proyectos/lista_equipos.html', {'equipos': Tareas})
 
 def lista_proyectos(request):
-    Proyectos = Proyecto.objects.all()  # Obtén todos los equipos
+    Proyectos = Proyecto.objects.all()  
     return render(request, 'proyectos/lista_equipos.html', {'equipos': Proyectos})
 
 def pagina_principal(request):

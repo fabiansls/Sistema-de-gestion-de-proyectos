@@ -9,7 +9,7 @@
     <h1>Lista de Equipos</h1>
     <ul>
         {% for equipo in equipos %}
-            <li>{{ equipo.nombre }} - {{ equipo.descripcion }}</li> <!-- Ajusta según tus atributos -->
+            <li>{{ equipo.nombre }} - {{ equipo.descripcion }}</li> 
         {% empty %}
             <li>No hay equipos registrados.</li>
         {% endfor %}

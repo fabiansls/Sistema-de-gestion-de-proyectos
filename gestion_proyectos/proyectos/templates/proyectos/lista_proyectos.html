@@ -1,4 +1,4 @@
-<!-- proyectos/lista_proyectos.html -->
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +10,7 @@
     <h1>Lista de Proyectos</h1>
     <ul>
         {% for proyecto in proyectos %}
-            <li>{{ proyecto.nombre }} - {{ proyecto.descripcion }}</li> <!-- Ajusta según tus atributos -->
+            <li>{{ proyecto.nombre }} - {{ proyecto.descripcion }}</li> 
         {% empty %}
             <li>No hay proyectos registrados.</li>
         {% endfor %}
